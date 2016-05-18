@@ -1,0 +1,8 @@
+<h1><%= @movie.title %></h1>
+
+<div><%= @movie.youtube_embed_link.html_safe %></div>
+
+<p><%= @movie.summary %></p>
+
+<%= link_to "Movies", movies_path %>
+
