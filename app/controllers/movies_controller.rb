@@ -1,7 +1,15 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: [:show, :edit]
+  before_action :set_movie, only: [:show, :edit, :update]
 
   def edit
+  end
+
+  def update
+    if @movie.update_attributes(movie_params)
+      redirect_to @movie
+    else
+      render :edit
+    end
   end
 
   def show
