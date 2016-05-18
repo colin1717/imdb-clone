@@ -4,6 +4,10 @@
 
 <p><%= @movie.summary %></p>
 
+<% @movie.actors.each do |actor| %>
+<p><%= link_to actor.name, actor_path(actor) %></p>
+<% end %>
+
 <%= link_to "Edit", edit_movie_path %> |
 <%= link_to "Show All Movies", movies_path %>
 

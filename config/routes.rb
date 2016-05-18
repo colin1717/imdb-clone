@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'reviews/index'
+
+  get 'reviews/new'
+
+  get 'reviews/edit'
+
+  get 'reviews/show'
+
+  get 'reviews/create'
+
+  get 'reviews/destroy'
+
+  get 'reviews/update'
+
   resources :actors
 
   resources :movies, except: [:destroy]
