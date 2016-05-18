@@ -11,6 +11,8 @@
 
   <% else %>
     <button> <%= link_to "Log Out", destroy_user_session_path, method: :delete %> </button>
+    <br> <br>
+    <%= link_to "Movies", movies_path %>
 
   <% end %>
 </div>
