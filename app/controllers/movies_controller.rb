@@ -14,6 +14,7 @@ class MoviesController < ApplicationController
   end
 
   def show
+    @review = Review.where(movie_id: @movie)
   end
 
   def index
@@ -33,10 +34,12 @@ class MoviesController < ApplicationController
     end
   end
 
+
+
   private
 
   def movie_params
-    params.require(:movie).permit(:title, :summary, :youtube_embed_link, :thumbnail)
+    params.require(:movie).permit(:title, :summary, :youtube_embed_link, :thumbnail, actor_ids: [])
   end
 
   def set_movie

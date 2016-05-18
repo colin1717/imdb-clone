@@ -15,6 +15,10 @@
     <%= f.label :thumbnail %>
     <%= f.text_field :thumbnail %>
   </p>
-
+  <p>Add starring actors already in our database:</p>
+  <% Actor.all.each do |actor| %>
+  <%= check_box_tag 'movie[actor_ids][]', actor.id %> <%= actor.name %>
+  <br><br>
+  <% end %>
   <%= f.submit %>
 <% end %>
