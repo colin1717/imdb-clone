@@ -1,0 +1,20 @@
+<%= form_for @movie do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :summary %>
+    <%= f.text_field :summary %>
+  </p>
+  <p>
+    <%= f.label :youtube_embed_link %>
+    <%= f.text_field :youtube_embed_link %>
+  </p>
+  <p>
+    <%= f.label :thumbnail %>
+    <%= f.text_field :thumbnail %>
+  </p>
+
+  <%= f.submit %>
+<% end %>
