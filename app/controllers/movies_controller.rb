@@ -16,12 +16,18 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new
+    @movie = Movie.new(movie_params)
     if @movie.save
       redirect_to @movie
     else
       render :index
     end
+  end
+
+  private
+
+  def movie_params
+    params.require(:movie).permit(:title, :summary, :youtube_embed_link, :thumbnail)
   end
 
   def set_movie

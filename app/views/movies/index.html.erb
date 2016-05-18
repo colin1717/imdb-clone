@@ -1,2 +1,19 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>Movies</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Thumbnail</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie|%>
+    <tr>
+      <td><img height=50 width=50 src=<%= movie.thumbnail %>></td>
+      <td><%= link_to movie.title, movie %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
