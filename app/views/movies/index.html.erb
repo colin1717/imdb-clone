@@ -1,5 +1,7 @@
 <h1>Movies</h1>
 
+<%= link_to "Add New Movie", new_movie_path %>
+<br> <br>
 
 <table>
   <thead>
@@ -11,7 +13,7 @@
   <tbody>
     <% @movies.each do |movie|%>
     <tr>
-      <td><img height=50 width=50 src=<%= movie.thumbnail %>></td>
+      <td><img width=50 src=<%= movie.thumbnail %>></td>
       <td><%= link_to movie.title, movie %></td>
     </tr>
   </tbody>
