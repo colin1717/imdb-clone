@@ -10,9 +10,12 @@
     <button> <%= link_to "Log In", new_user_session_path %> </button>
 
   <% else %>
-    <button> <%= link_to "Log Out", destroy_user_session_path, method: :delete %> </button>
+    <%= link_to "Movies", movies_path %> |
+    <%= link_to "Actors", actors_path %>
     <br> <br>
-    <%= link_to "Movies", movies_path %>
+
+    <button> <%= link_to "Log Out", destroy_user_session_path, method: :delete %> </button>
+
 
   <% end %>
 </div>
