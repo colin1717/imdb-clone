@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :actors
+
   resources :movies, except: [:destroy]
 
   devise_for :users

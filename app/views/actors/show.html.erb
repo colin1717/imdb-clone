@@ -1,0 +1,9 @@
+<h1><%= @actor.name %></h1>
+
+<h2>Born: <%= @actor.year_of_birth %></h2>
+
+<p><img height=200 src=<%= @actor.thumbnail %>></p>
+
+<%= link_to "Edit", edit_actor_path %> |
+<%= link_to "Show All Actors", actors_path %>
+

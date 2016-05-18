@@ -1,0 +1,23 @@
+<h1>Actors</h1>
+
+<%= link_to "Add New Actor", new_actor_path %>
+<br> <br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Thumbnail</th>
+      <th>Name</th>
+      <th>Year of Birth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @actors.each do |actor|%>
+    <tr>
+      <td><img width=100 src=<%= actor.thumbnail %>></td>
+      <td><%= link_to actor.name, actor %></td>
+      <td><%= actor.year_of_birth %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
