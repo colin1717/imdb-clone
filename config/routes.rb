@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :movies, defaults: { :format => 'json'}
+    resources :actors, defaults: { :format => 'json'}
   end
 
   devise_for :users
