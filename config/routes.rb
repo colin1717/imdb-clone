@@ -1,22 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'reviews/index'
-
-  get 'reviews/new'
-
-  get 'reviews/edit'
-
-  get 'reviews/show'
-
-  get 'reviews/create'
-
-  get 'reviews/destroy'
-
-  get 'reviews/update'
+  resources :reviews
 
   resources :actors
 
   resources :movies, except: [:destroy]
+
+  namespace :api do
+    resources :movies, defaults: { :format => 'json'}
+  end
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
